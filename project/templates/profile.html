@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{ name }}
+</h1>
+<div class=text-area>
+  <form action="" method=post name="1" enctype=multipart/form-data>
+    <div>
+        <div>
+            <textarea id="srctext1" name=txtarea rows="12" cols="80">{{in_text}}</textarea>
+        </div>
+        <input type="hidden" name="form-name" value="form1">
+        <div>
+            <label for="percent">Percent</label>    
+            <input type="number" name=percent min="10" max="70">
+        </div>
+        
+        <input type="submit" name="txt" value=Summarize>
+    </div>
+  </form>
+</div>
+<div id=summary>
+  <textarea id="srctext2" name=txtarea rows="12" cols="80">{{sum_text}}</textarea>
+</div>
+  <h3>OR</h3>
+<form action="" method=post name="2" enctype=multipart/form-data>
+  <div>
+      <p><input type=file name=file>
+
+      <div>
+          <label for="percent">Percent</label>    
+          <input type="number" name=percent min="10" max="70">
+      </div>
+      <input type="hidden" name="form-name" value="form2">
+      <div>
+          <input type=submit value=Upload>
+      </div>
+  </div>
+</form>
+{% endblock %}
