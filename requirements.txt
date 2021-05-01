@@ -99,6 +99,7 @@ flatbuffers==1.12
 fsspec @ file:///tmp/build/80754af9/fsspec_1597944003862/work
 ftfy==5.9
 future==0.18.2
+fuzzywuzzy==0.18.0
 gast==0.3.3
 gensim==3.8.3
 gevent @ file:///C:/ci/gevent_1593010757573/work
