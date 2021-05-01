@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+    app.config['DATABASE_URL'] = 'sqlite:///db.sqlite'
     static_folder = 'project/static/'
     app.config['FOLDER'] = static_folder + 'upload'
     app.config['FOLDER2'] = static_folder + 'download'
