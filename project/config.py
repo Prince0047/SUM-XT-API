@@ -1,4 +1,6 @@
-from project import db, create_app
+import click
+from flask.cli import with_appcontext
+from . import db, create_app
 
 @click.command(name='create_database')
 @with_appcontext
