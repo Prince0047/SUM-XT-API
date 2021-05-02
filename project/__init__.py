@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['DATABASE_URL'] = 'sqlite:///db.sqlite'
+    app.config['DATABASE_URL'] = 'postgres://jbichaxecimeeu:7bfb499f680a399bdab66115afcb5a13c8af4b5ea10f140ca195da4331f6bfe7@ec2-54-152-185-191.compute-1.amazonaws.com:5432/d665jk19lob8l2'
     static_folder = 'project/static/'
     app.config['FOLDER'] = static_folder + 'upload'
     app.config['FOLDER2'] = static_folder + 'download'
