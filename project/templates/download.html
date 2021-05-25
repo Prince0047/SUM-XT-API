@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
+<h1 class="title sp_text">
   Summary for the File {{ value }}
 </h1>
-<div class="container" align="center">
-    <a href="/return-files/{{value}}" target="blank"><button class='btn btn-default'>Download</button></a>
+<div class="container" align="center" style="margin-top: 2rem;">
+    <a href="/return-files/{{value}}" target="blank"><button class='btn btn-default button'>Download</button></a>
    </div>
 {% endblock %}

@@ -1,0 +1,46 @@
+.video-sec{
+    position: absolute;
+  width: 38%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  top: 8rem;
+  right:0rem;
+
+  .video-container {
+    position: absolute;
+    justify-self: center;
+    width: 90%;
+    opacity: 0.5;
+    
+    // video{
+    //     border-radius: 50px;
+    //     box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
+    //     overflow: visible;
+    // }
+
+    video{
+        -moz-border-radius:40px;
+        -webkit-border-radius:40px;
+        border-radius:40px;
+        box-shadow: 0 19px 51px 0 rgba(33, 86, 184, 0.16), 0 14px 19px 0 rgba(22, 81, 207, 0.07);
+        overflow:hidden;
+    }
+
+    .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background-color: lightblue;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.5;
+      }
+  }
+  
+
+}
+

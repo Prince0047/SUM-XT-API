@@ -1,10 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Flask Login Example
-</h1>
-<h2 class="subtitle">
-  Easy authentication and authorization in Flask.
-</h2>
+
+<div id="hero">
+  <h1 class="hero-title">
+    Hi, This is a Flask API  <p>
+    For <span class="sp_text">Text Summarization.</span>
+  </h1>
+</div>
+<div id="api-info">
+  <div class="heading">
+    <h2>About</h2>
+  </div>
+  <div class="info-packs">
+    <div class="info-pack">
+      <img src="https://files.123freevectors.com/wp-content/original/130963-abstract-blue-and-white-polygon-background-graphic-design-vector-image.jpg" alt="">
+      <div class="about-text">
+        <p>
+          This is a flask API built for easy and fast Text Summarization.
+          You can summarize any English text to your requirement by
+          specifying the summary percent. It also support document 
+          summarization. One can upload a .txt document a download the 
+          summarized One.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="video-sec">
+  <div class="video-container">
+    <div class="color-overlay"></div>
+    <video autoplay loop muted>
+      <source src="{{url_for('static', filename='img/back_video.mp4')}}" type="video/mp4">
+    </video>
+  </div>
+</div>
 {% endblock %}
