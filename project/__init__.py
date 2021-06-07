@@ -17,11 +17,11 @@ app = Flask(__name__)
 
 # Uncomment for loacl use
 
-# app.config['SECRET_KEY'] = SECRET_KEY
-# app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
-# # Heroku Database for postgesql
+app.config['SECRET_KEY'] = SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
+# Heroku Database for postgesql
 
-# app.config['DATABASE_URL'] = DATABASE_URL
+app.config['DATABASE_URL'] = DATABASE_URL
 
 
 
