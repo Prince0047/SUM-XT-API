@@ -1,13 +1,13 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-# from decouple import config
+from decouple import config
 
 
 
-# SECRET_KEY = config('SECRET_KEY')
-# SQLALCHEMY_DATABASE_URI = config('SQLALCHEMY_DATABASE_URI')
-# DATABASE_URL = config('DATABASE_URL')
+SECRET_KEY = config('SECRET_KEY')
+SQLALCHEMY_DATABASE_URI = config('SQLALCHEMY_DATABASE_URI')
+DATABASE_URL = config('DATABASE_URL')
 
 # init SQLAlchemy so we can use it later in our models
 
@@ -25,9 +25,9 @@ app = Flask(__name__)
 
 
 
-app.config.from_envvar('SECRET_KEY')
-app.config.from_envvar('SQLALCHEMY_DATABASE_URI')
-app.config.from_envvar('DATABASE_URL')
+# app.config.from_envvar('SECRET_KEY')
+# app.config.from_envvar('SQLALCHEMY_DATABASE_URI')
+# app.config.from_envvar('DATABASE_URL')
 
 
 
