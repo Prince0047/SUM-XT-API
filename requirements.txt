@@ -8,4 +8,3 @@ gensim==3.8.3
 gunicorn
 psycopg2==2.8.6
 python_decouple==3.4
-decouple==0.0.7
