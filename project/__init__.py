@@ -1,6 +1,13 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+from decouple import config
+
+
+
+SECRET_KEY = config('SECRET_KEY')
+SQLALCHEMY_DATABASE_URI = config('SQLALCHEMY_DATABASE_URI')
+DATABASE_URL = config('DATABASE_URL')
 
 # init SQLAlchemy so we can use it later in our models
 
@@ -8,12 +15,12 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'secret-key-goes-here'
+app.config['SECRET_KEY'] = SECRET_KEY
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://jbichaxecimeeu:7bfb499f680a399bdab66115afcb5a13c8af4b5ea10f140ca195da4331f6bfe7@ec2-54-152-185-191.compute-1.amazonaws.com:5432/d665jk19lob8l2' # Local database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://swyfkfgdcndhdi:f7684f2e83dcb945fbc365b89001915e9464c23d609242119cfaa7c6514a5b1b@ec2-54-145-224-156.compute-1.amazonaws.com:5432/d9tiuqguqufkeq'
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 # Heroku Database for postgesql
 # app.config['DATABASE_URL'] = 'postgresql://jbichaxecimeeu:7bfb499f680a399bdab66115afcb5a13c8af4b5ea10f140ca195da4331f6bfe7@ec2-54-152-185-191.compute-1.amazonaws.com:5432/d665jk19lob8l2'
-app.config['DATABASE_URL'] = 'postgresql://swyfkfgdcndhdi:f7684f2e83dcb945fbc365b89001915e9464c23d609242119cfaa7c6514a5b1b@ec2-54-145-224-156.compute-1.amazonaws.com:5432/d9tiuqguqufkeq'
+app.config['DATABASE_URL'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 static_folder = 'project/static/'
 app.config['FOLDER'] = static_folder + 'upload'

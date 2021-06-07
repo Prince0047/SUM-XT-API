@@ -193,8 +193,10 @@ section #api-info .info-packs .info-pack {
   margin: 2rem;
 }
 section #api-info .info-packs .info-pack img {
-  max-width: 30rem;
-  max-height: 70vh;
+  max-width: 32rem;
+  max-height: 80vh;
+  border-radius: 20px;
+  box-shadow: 0 19px 51px 0 rgba(33, 86, 184, 0.16), 0 14px 19px 0 rgba(22, 81, 207, 0.07);
 }
 section #api-info .info-packs .info-pack .about-text {
   text-align: center;
