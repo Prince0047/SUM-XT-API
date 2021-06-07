@@ -24,6 +24,13 @@ app = Flask(__name__)
 # app.config['DATABASE_URL'] = DATABASE_URL
 
 
+
+app.config.from_envvar('SECRET_KEY')
+app.config.from_envvar('SQLALCHEMY_DATABASE_URI')
+app.config.from_envvar('DATABASE_URL')
+
+
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 static_folder = 'project/static/'
 app.config['FOLDER'] = static_folder + 'upload'
